@@ -1,0 +1,209 @@
+<style type="text/css">
+  * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+  
+  body {
+      background-image: url('img/coppel.png');
+      background-repeat: repeat;
+      background-size:50% 50%;
+  
+  }
+  
+  .form-register{
+      width: 400px;
+      background-color:#2471A3;
+      padding: 30px;
+      margin: auto;
+      margin-top: 100px;
+      border-radius: 4px;
+      font-family: 'Calibri';
+      color: white;
+      box-shadow: 7px 13px 37px #000;
+  
+  }
+ 
+  .controls {
+      width: 100%;
+      background-color:white;
+      padding: 10px;
+      border-radius: 4px;
+      margin-bottom: 5px;
+      border: 1px solid white;
+      font-family: 'calibri';
+      font-size: 18px;
+      color: black;
+  }
+  .form-register p {
+      height: 40px;
+      text-align: center;
+      font-size: 18px;
+      line-height: 40px;
+  
+  }
+  .form-register a {
+      color:black;
+      text-decoration: none;
+  }
+  .form-register a:hover {
+      color:black;
+      text-decoration: underline;
+  }
+  .form-register .botonregistro {
+      background-color: black;
+      border: none;
+      padding: 10px;
+      color:white;
+      margin: 17px 115px;
+      font-size: 20px;
+      cursor: pointer;
+  
+  }
+  .form-register .botonacceso {
+      background-color: black;
+      border: none;
+      padding: 10px;
+      color:white;
+      margin: 17px 100px;
+      font-size: 20px;
+      cursor: pointer;
+  
+  }
+  </style>
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="sty.css">
+<title>Calcular </title>
+
+<h1>Bienvenido a pre-nómina (cálculos) </h1>
+
+<script>
+function horastrabajadas(){
+	horasalario = document.getElementById("salariohora").value;
+	horas = document.getElementById("horas").value;
+	r = horasalario*horas;
+	document.getElementById("resultado").value = r;
+	}
+</script>
+</head> 
+<body>
+
+<section class="form-register">
+  
+<h1>Horas trabajadas</h1>
+<form id="horastrabajadas">
+  <input type="text" id="salariohora" placeholder="Salario por hora $55"    onChange="horastrabajadas();"> 
+  <input type="text" id="horas" placeholder="Horas trabajadas"   onChange="horastrabajadas();"> X
+  <input type="text" id="resultado"> =
+</form>
+
+<br><br>
+
+<script>
+    function faltas(){
+        descuento = document.getElementById("descuento").value;
+        falta = document.getElementById("falta").value;
+        re = descuento*falta;
+        document.getElementById("resul").value = re;
+        }
+    </script>
+    </head>
+    <body>
+    
+    <h1>Faltas</h1>
+    <form id="faltas">
+      <input type="text" id="descuento" placeholder="Descuento por faltas $-440"    onChange="faltas();"> 
+      <input type="text" id="falta" placeholder="Numero de Faltas"   onChange="faltas();"> X
+      <input type="text" id="resul"> =
+    </form>
+
+
+    <br><br>
+
+    <script>
+        function faltasjustificadas(){
+            descuent = document.getElementById("descuent").value;
+            falt = document.getElementById("falt").value;
+            res = descuent*falt;
+            document.getElementById("result").value = res;
+            }
+        </script>
+        </head>
+        <body>
+        
+        <h1>Faltas Justificadas</h1>
+        <form id="faltasjustificadas">
+          <input type="text" id="descuent" placeholder="Valor falta justificada $-264"    onChange="faltasjustificadas();"> 
+          <input type="text" id="falt" placeholder="Faltas Justificadas"   onChange="faltasjustificadas();"> X
+          <input type="text" id="result"> =
+        </form>
+
+        <br><br>
+
+
+
+
+        <script>
+            function retardos(){
+                retardo = document.getElementById("retardo").value;
+                minretardos = document.getElementById("minretardos").value;
+                resulta = retardo*minretardos;
+                document.getElementById("resulta").value = resulta;
+                }
+            </script>
+            </head>
+            <body>
+            
+            <h1>Retardos</h1>
+            <form id="retardos">
+              <input type="text" id="retardo" placeholder="Retardo min-$0.16 hr-$55"    onChange="retardos();"> 
+              <input type="text" id="minretardos" placeholder="Tiempo del retardo"   onChange="retardos();"> X
+              <input type="text" id="resulta"> =
+            </form>
+    
+    
+        <br><br>
+
+
+        <script>
+            function horasextras(){
+                horasal = document.getElementById("horasal").value;
+                hor = document.getElementById("hor").value;
+                resu = horasal*hor;
+                document.getElementById("resultad").value = resu;
+                }
+            </script>
+            </head>
+            <body>
+            
+            <h1>Horas Extras</h1>
+            <h5>Igual o menor a "9hrs" se considera doble del salario</h5>
+            <h5>Igual o mayor a "10hrs" se considera triple del salario</h5>
+            <form id="horasextras">
+              <input type="text" id="horasal" placeholder="Doble=$110 Triple=$165"    onChange="horasextras();"> 
+              <input type="text" id="hor" placeholder="Horas trabajadas"   onChange="horasextras();"> X
+              <input type="text" id="resultad"> =
+            </form>
+            
+            <br><br>
+            
+
+      
+
+    
+
+
+
+
+
+
+           
+
+</body>
+</html>

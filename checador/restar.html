@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="sty.css">
+<title>Calcular </title>
+<h1>Bienvenido a pre-nómina (cálculos) </h1>
+<script>
+function calculaTotal() {
+    var total = 0;
+    $(".monto").each(function () {
+        let num = parseFloat($(this).val());
+        if (isNaN(num)) {
+            total += 0;
+        } else if (["semipura_c_424", "semipura_c_776", "semipurad_d_282"].includes($(this).attr('name'))) {
+            // Restar
+            total -= num
+        } else {
+            // Sumar
+            total += num
+        }
+    });
+
+    document.getElementById("spTotal").innerHTML = total;
+}
+</script>

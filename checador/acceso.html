@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Dirección de nuestro documento CSS-->
+    <!--Titulo de la página-->
+    <title>Acceso</title>
+    <style type="text/css">
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body {
+    background-image: url('img/coppel.png');
+    background-repeat: repeat;
+    background-size:50% 50%;
+
+}
+
+.form-register{
+    width: 400px;
+    background-color:#2471A3;
+    padding: 30px;
+    margin: auto;
+    margin-top: 100px;
+    border-radius: 4px;
+    font-family: 'Calibri';
+    color: white;
+    box-shadow: 7px 13px 37px #000;
+
+}
+.form-register h4 {
+    font-size: 22px;
+    margin-bottom: 20px;
+
+}
+.controls {
+    width: 100%;
+    background-color:white;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 5px;
+    border: 1px solid white;
+    font-family: 'calibri';
+    font-size: 18px;
+    color: black;
+}
+.form-register p {
+    height: 40px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 40px;
+
+}
+.form-register a {
+    color:black;
+    text-decoration: none;
+}
+.form-register a:hover {
+    color:black;
+    text-decoration: underline;
+}
+.form-register .botonregistro {
+    background-color: black;
+    border: none;
+    padding: 10px;
+    color:white;
+    margin: 17px 115px;
+    font-size: 20px;
+    cursor: pointer;
+
+}
+.form-register .botonacceso {
+    background-color: black;
+    border: none;
+    padding: 10px;
+    color:white;
+    margin: 17px 100px;
+    font-size: 20px;
+    cursor: pointer;
+
+}
+</style>
+</head> 
+
+<body>
+      <!--Formulario de inicio de sesión-->
+    <section class="form-register"> 
+      <h1>Bienvenido</h1>
+      <br>
+       <!--Base de datos a donde se envia la información-->  <!--Metodo POST para que no se vea la información-->
+      <form action="acceso.php" name="" method="POST">
+        <table border="0" align="center">
+           <!--Formulario propiedades que contiene para ingresar el número de empleado-->
+          <input class="controls" type="text" name="numempleado" id="numempleado" placeholder="Número de empleado" required>
+           <!--Formulario propiedades que contiene para ingresar la contraseña-->
+          <input class="controls" type="password" name="contrase" id="contrase" placeholder="Contraseña" required>
+           <!--Página donde se encuentra el formulario para poder hacer el registro en caso de necesitarlo-->
+          <p><a href="empleados.html"> Registrate Aquí</a></p>
+    </section>
+    <!--Botón de Aceptar/Inicio de sesión-->
+    <input aling="center" class="botonacceso" type="submit" value="Iniciar Sesión" name="enviar" id="enviar">
+</body>
+</html>
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
